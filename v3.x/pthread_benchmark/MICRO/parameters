@@ -1,0 +1,10 @@
+3
+10
+1024
+4
+8
+#iterations: repeat times
+#jump: a single thread access all the accesses in this jump area
+#stride in integers (4 bytes)
+#blocks
+#threads

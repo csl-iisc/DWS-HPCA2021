@@ -1,0 +1,35 @@
+Universe = vanilla
+Executable = gpgpu-sim
+Initialdir = $(dir)
+Log = gpgpusim.log
+Output = $(dir).out
+Error = $(dir).error
+getenv = True
+arguments = $(arg1) $(arg2)
+Queue arg1, arg2, dir from (
+  BLK,BLK, BLK.BLK.pwc.nobypass.16.16.128:8
+  BLK,LPS, BLK.LPS.pwc.nobypass.16.16.128:8
+  BLK,LUH, BLK.LUH.pwc.nobypass.16.16.128:8
+  BLK,NN, BLK.NN.pwc.nobypass.16.16.128:8
+  BLK,QTC, BLK.QTC.pwc.nobypass.16.16.128:8
+  BLK,SC, BLK.SC.pwc.nobypass.16.16.128:8
+  BLK,SCP, BLK.SCP.pwc.nobypass.16.16.128:8
+  LPS,BLK, LPS.BLK.pwc.nobypass.16.16.128:8
+  LPS,LPS, LPS.LPS.pwc.nobypass.16.16.128:8
+  LPS,LUH, LPS.LUH.pwc.nobypass.16.16.128:8
+  LPS,NN, LPS.NN.pwc.nobypass.16.16.128:8
+  LPS,QTC, LPS.QTC.pwc.nobypass.16.16.128:8
+  BLK,BLK, BLK.BLK.ideal
+  BLK,LPS, BLK.LPS.ideal
+  BLK,LUH, BLK.LUH.ideal
+  BLK,NN, BLK.NN.ideal
+  BLK,QTC, BLK.QTC.ideal
+  BLK,SC, BLK.SC.ideal
+  BLK,SCP, BLK.SCP.ideal
+  LPS,BLK, LPS.BLK.ideal
+  LPS,LPS, LPS.LPS.ideal
+  LPS,LUH, LPS.LUH.ideal
+  LPS,NN, LPS.NN.ideal
+  LPS,QTC, LPS.QTC.ideal
+)
+
